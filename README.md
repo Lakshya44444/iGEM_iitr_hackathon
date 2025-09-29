@@ -34,19 +34,7 @@ Data Augmentation: Used random rotations, shifts, and flips to create diverse tr
 4. Code Robustness (The Fix)
 A major challenge involved overriding TensorFlow's tendency to incorrectly infer a 1-channel (grayscale) input shape, which conflicted with the 3-channel (RGB) ImageNet weights. This was solved by explicitly setting color_mode='rgb' in the data generators, forcing the grayscale X-rays to be interpreted in the required 3-channel format.
 
-Project Structure and Files
-/Tuberculosis-CXR-Classifier
-├── data/
-│   ├── train/            # Training X-ray images
-│   ├── test/             # Unlabeled images for prediction
-│   ├── train_labels.csv  # Ground truth labels (0/1)
-│   └── ...
-├── src/
-│   └── final_tb_classifier.py # <--- The full, final Python code
-├── best_tb_resnet50_auc.h5  # Saved model weights
-└── README.md              # This file
-Installation and Execution
-To run this project, you need a Python 3 environment with GPU support (recommended for speed).
+
 
 Clone the Repository:
 
